@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+  <title>FingerPose Example</title>
+
+  <!-- Require the peer dependencies of handpose. -->
+  <script src="https://unpkg.com/@tensorflow/tfjs-core@3.7.0/dist/tf-core.js"></script>
+
+  <!-- You must explicitly require a TF.js backend if you're not using the tfs union bundle. -->
+  <script src="https://unpkg.com/@tensorflow/tfjs-backend-webgl@3.7.0/dist/tf-backend-webgl.js"></script>
+
+  <!-- The main handpose library -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/hand-pose-detection@2.0.0/dist/hand-pose-detection.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands@0.4.1646424915/hands.min.js"></script>
+
+  <!-- The fingerpose library -->
+  <script src="https://cdn.jsdelivr.net/npm/fingerpose@0.1.0/dist/fingerpose.min.js" type="text/javascript"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      user-select: none;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      margin: 20px auto;
+      display: flex;
+    }
+
+    .video,
+    .debug {
+      padding: 0 20px;
+    }
+
+    table.summary {
+      border: 1px solid #333;
+      border-collapse: collapse;
+    }
+
+    table.summary td,
+    table.summary th {
+      border: 1px solid #333;
+      padding: 5px 8px;
+    }
+
+    #video-container {
+      width: 640px;
+      height: 480px;
+      position: relative;
+    }
+
+    .layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    #pose-video {
+      transform: scaleX(-1);
+    }
+
+    .pose-result {
+      font-size: 100px;
+      text-align: right;
+      padding: 20px 30px 0 0;
+    }
+
+    #pose-result-left {
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="video">
+      <div id="video-container">
+        <video id="pose-video" class="layer" playsinline></video>
+        <canvas id="pose-canvas" class="layer"></canvas>
+        <div id="pose-result-left" class="layer pose-result"></div>
+        <br>
+        <div id="pose-result-right" class="layer pose-result"></div>
+      </div>
+    </div>
+
+    <div class="debug">
+      <h2>Left Hand</h2>
+      <table id="summary-left" class="summary">
+        <thead>
+          <tr>
+            <th>Idx</th>
+            <th>Finger</th>
+            <th style="width: 110px">Curl</th>
+            <th style="width: 170px">Direction</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0</td>
+            <td>Thumb</td>
+            <td><span id="curl-0">-</span></td>
+            <td><span id="dir-0">-</span></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Index</td>
+            <td><span id="curl-1">-</span></td>
+            <td><span id="dir-1">-</span></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Middle</td>
+            <td><span id="curl-2">-</span></td>
+            <td><span id="dir-2">-</span></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Ring</td>
+            <td><span id="curl-3">-</span></td>
+            <td><span id="dir-3">-</span></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Pinky</td>
+            <td><span id="curl-4">-</span></td>
+            <td><span id="dir-4">-</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <h2>Right Hand</h2>
+      <table id="summary-right" class="summary">
+        <thead>
+          <tr>
+            <th>Idx</th>
+            <th>Finger</th>
+            <th style="width: 110px">Curl</th>
+            <th style="width: 170px">Direction</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0</td>
+            <td>Thumb</td>
+            <td><span id="curl-0">-</span></td>
+            <td><span id="dir-0">-</span></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Index</td>
+            <td><span id="curl-1">-</span></td>
+            <td><span id="dir-1">-</span></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Middle</td>
+            <td><span id="curl-2">-</span></td>
+            <td><span id="dir-2">-</span></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Ring</td>
+            <td><span id="curl-3">-</span></td>
+            <td><span id="dir-3">-</span></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Pinky</td>
+            <td><span id="curl-4">-</span></td>
+            <td><span id="dir-4">-</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <script src="./src/index.js" type="module"> </script>
+
+</body>
+
+</html>
