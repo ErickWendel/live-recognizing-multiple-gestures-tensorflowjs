@@ -10,7 +10,8 @@ Access our [**exclusive telegram channel**](https://bit.ly/canalerickwendel) so 
 
 ## Complete source code
 - Access it in [app](./recorded/)
-
+- Checkout the [live demo](https://erickwendel.github.io/live-recognizing-multiple-gestures-tensorflowjs/recorded/). 
+  - It recognizes, single hand gestures 🖐,👊,✌️,👍🏻 and the multigesture 🙅
 
 
 ## Have fun!
