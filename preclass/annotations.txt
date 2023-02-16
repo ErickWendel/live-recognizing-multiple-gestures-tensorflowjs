@@ -1,0 +1,6 @@
+add fingerpose from cdn
+
+https://www.npmjs.com/package/fingerpose
+show https://github.com/andypotato/rock-paper-scissors
+
+copy : https://github.com/andypotato/rock-paper-scissors/blob/master/src/js/Gestures.js
