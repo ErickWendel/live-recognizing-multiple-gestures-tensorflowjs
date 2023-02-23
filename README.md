@@ -2,7 +2,7 @@
 
 ## About
 
-This is the examples shown in my live screen about [recognizing multiple hand gestures using tensorflowjs and fingerpose (pt-br)](https://youtube.com/live/-wXPxJYhZeI?feature=share)
+This is the examples shown in my live screen about [recognizing multiple hand gestures using tensorflowjs and fingerpose (pt-br)](https://youtube.com/live/MeS6dX2a2zQ?feature=share)
 
 First of all, leave your star 🌟 on this repo.
 
