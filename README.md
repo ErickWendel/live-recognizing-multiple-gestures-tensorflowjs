@@ -1,8 +1,8 @@
-# live-recognizing-multiple-gestures-tensorflowjs
+# processing-large-reports-in-the-browser
 
 ## About
 
-This is the examples shown in my live screen about [recognizing multiple hand gestures using tensorflowjs and fingerpose (pt-br)](https://youtube.com/live/MeS6dX2a2zQ?feature=share)
+This is the examples shown in my live screen about [Recognizing gestures in real time right from the browser (pt-br)](https://www.youtube.com/live/MeS6dX2a2zQ?feature=share)
 
 First of all, leave your star 🌟 on this repo.
 
@@ -10,9 +10,19 @@ Access our [**exclusive telegram channel**](https://bit.ly/canalerickwendel) so 
 
 ## Complete source code
 - Access it in [app](./recorded/)
-- Checkout the [live demo](#). 
+- Checkout the [live demo](https://erickwendel.github.io/live-recognizing-multiple-gestures-tensorflowjs/recorded/). 
+  - It recognizes, single hand gestures 🖐,👊,✌️,👍🏻 and the multigesture 🙅
 
 
 ## Have fun!
-![Erick_Wendel_-_Thumbnail_Performance_e_multithreading](https://user-images.githubusercontent.com/8060102/221040150-ae60ab83-b969-48d6-a413-db88b3980d62.jpg)
+![THUMB---JS-EXPERTPrancheta-1](https://user-images.githubusercontent.com/8060102/219484100-3b362e7a-6a2f-4df9-b4ce-d3be64a0964a.png)
 
+## References:
+- https://github.com/ErickWendel/fingerpose
+- Rock, Paper & Scissors: https://github.com/andypotato/rock-paper-scissors
+- Pacman: https://storage.googleapis.com/tfjs-examples/webcam-transfer-learning/dist/index.html
+- https://github.com/tensorflow/tfjs-examples/
+- https://www.npmjs.com/package/fingerpose
+- https://github.com/andypotato/rock-paper-scissors/blob/master/src/js/Gestures.js
+- https://www.tensorflow.org/js/demos
+- https://github.com/tensorflow/tfjs-models/tree/master/hand-pose-detection#mediapipe-hands-keypoints-used-in-mediapipe-hands
